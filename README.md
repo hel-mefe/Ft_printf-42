@@ -36,3 +36,52 @@ All output is done using **`write()`**, not standard I/O.
 
 ## 📁 Project Structure
 
+.
+├── ft_printf.c          # Main entrypoint
+├── functionalities.c    # Format handlers
+├── functions.c          # Helpers (itoa, length, etc.)
+├── combination.c        # Dispatcher logic
+├── execute.c            # Execution logic per specifier
+├── ft_printf.h          # Header + prototypes
+├── Makefile
+└── tests/               # (optional) Unit tests
+
+
+---
+
+## 📦 Build
+
+To compile the project and generate the static library:
+
+```sh
+make
+```
+
+This will produce:
+
+libftprintf.a — static library
+
+(optional) test executable if included
+
+To clean object files:
+
+## Cleaning
+
+To clean object files:
+
+```sh
+make clean
+```
+
+# Usage
+
+```C
+#include "ft_printf.h"
+
+int main(void)
+{
+    ft_printf("Hello %s, number: %d\n", "world", 42);
+    return 0;
+}
+
+```
